@@ -1,4 +1,4 @@
-const cpfi=["529.982.247-25", "080.851.649-30", "09019234590", "019203911041314", "000.000.000-00", "028.687.800-32", "014.227-619-75"]
+const cpfi=["529.982.247-25",  "111.111.111-11", "39845632744",  "12345678900", "00000000000",  "52998224725" ]
 function limpar_cpf(cpf: string): string{
   return cpf.replace(/\D/g, '');
 }
@@ -11,10 +11,8 @@ function form(cpf: string): string{
 cpfi.forEach((cpf) => {
   const limpo = limpar_cpf(cpf);
   if(limpo.length!==11){
-    cpf=form(cpf);
     console.log(`ERRO: CPF inválido "${cpf}"`);
   }else if(numigual(limpo)){
-    cpf=form(cpf);
     console.log(`ERRO: CPF inválido "${cpf}"`);
   }else{
     let soma=0;
@@ -43,9 +41,9 @@ cpfi.forEach((cpf) => {
       dig2=11-res2;
     }
     if(dig0===cpfnum[9] && dig2===cpfnum[10]){
-      console.log(`CPF válido formatado: ${limpo}`);
-    }else{
       cpf=form(cpf);
+      console.log(`CPF válido formatado: ${cpf}`);
+    }else{
       console.log(`ERRO: CPF inválido "${cpf}"`);
     }
   }
