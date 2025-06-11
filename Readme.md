@@ -17,7 +17,8 @@ Você pode rodar este código diretamente no terminal usando `npx tsx` (sem prec
    ```
    npm install -D tsx
    ```
-4. Por fim execute o arquivo com:
+4. Certifique-se de que está na pasta onde o **arquivo.ts** está.
+5. Por fim execute o arquivo com:
 
    ```
    npx tsx validador-cpf.ts
